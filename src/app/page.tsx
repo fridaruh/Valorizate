@@ -76,12 +76,12 @@ export default function Home() {
 
         <div className="relative z-10 max-w-[960px] mx-auto">
           <Image
-            src="/logo.png"
+            src="/og-preview.png"
             alt="Valorizate"
-            width={120}
-            height={120}
+            width={480}
+            height={98}
             priority
-            className="mx-auto mb-8"
+            className="mx-auto mb-8 w-[280px] md:w-[400px] lg:w-[480px] h-auto"
           />
           <p className="font-[family-name:var(--font-display)] font-semibold text-xs uppercase tracking-[4px] text-[#0052E0] mb-6">
             17 de octubre &middot; Bogota, Colombia
