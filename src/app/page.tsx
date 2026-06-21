@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
+import EventCard from "@/components/EventCard";
 import ScrollAnimator from "@/components/ScrollAnimator";
 
 const TICKET_URL = "#comprar";
@@ -85,17 +86,17 @@ export default function Home() {
             className="mx-auto mb-8"
           />
           <p className="font-[family-name:var(--font-display)] font-semibold text-xs uppercase tracking-[4px] text-[#0052E0] mb-6">
-            17 de octubre &middot; Bogota, Colombia
+            17 de octubre &middot; Bogotá, Colombia
           </p>
           <h1 className="font-[family-name:var(--font-display)] font-black text-4xl md:text-6xl lg:text-7xl uppercase leading-[0.95] mb-6 text-[#0A0A0A]">
             El primer concurso
             <br />
-            de educacion financiera
+            de educación financiera
             <br />
-            <span className="text-[#0052E0]">de America Latina</span>
+            <span className="text-[#0052E0]">de América Latina</span>
           </h1>
           <p className="font-[family-name:var(--font-body)] text-[#555555] text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Sabes tomar buenas decisiones con tu dinero? Es momento de
+            ¿Sabes tomar buenas decisiones con tu dinero? Es momento de
             demostrarlo.
           </p>
           <a
@@ -148,13 +149,13 @@ export default function Home() {
               </span>
             </div>
             <p className="font-[family-name:var(--font-body)] text-white/80 text-lg max-w-lg mx-auto">
-              Tu conocimiento sera el que te lleve a la final.
+              Tu conocimiento será el que te lleve a la final.
             </p>
           </div>
         </div>
       </section>
 
-      {/* QUE VIVIRAS */}
+      {/* QUÉ VIVIRÁS */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-white">
         <GeoShape
           color="#0052E0"
@@ -175,74 +176,61 @@ export default function Home() {
         <div className="relative z-10 max-w-[960px] mx-auto px-5 md:px-10">
           <div className="animate-on-scroll">
             <h2 className="font-[family-name:var(--font-display)] font-black text-3xl md:text-5xl uppercase text-center mb-16 text-[#0A0A0A]">
-              Que viviras durante el evento?
+              ¿Qué vivirás durante el evento?
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
                 title: "Competencia en vivo",
-                desc: "Clasificacion por fases con retos de conocimiento financiero.",
+                desc: "Clasificación por fases con retos de conocimiento financiero.",
                 icon: "M13 10V3L4 14h7v7l9-11h-7z",
+                color: "#0052E0",
               },
               {
                 title: "Conferencias accionables",
-                desc: "Conferencias cortas sobre dinero, ahorro, inversion y toma de decisiones financieras.",
+                desc: "Conferencias cortas sobre dinero, ahorro, inversión y toma de decisiones financieras.",
                 icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+                color: "#00BF88",
               },
               {
                 title: "Networking financiero",
-                desc: "Relacionamiento con empresas lideres del sector financiero.",
+                desc: "Relacionamiento con empresas líderes del sector financiero.",
                 icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+                color: "#7B61FF",
               },
               {
                 title: "Compite por $30M",
                 desc: "La oportunidad de competir por hasta $30 millones de pesos.",
                 icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+                color: "#FFE600",
               },
             ].map((item, i) => (
-              <div
+              <EventCard
                 key={i}
-                className="animate-on-scroll border border-[#E0E0E0] rounded-2xl p-8 hover:border-[#0052E0]/50 transition-colors bg-white"
-                style={{ transitionDelay: `${i * 100}ms` }}
-              >
-                <svg
-                  className="w-8 h-8 text-[#0052E0] mb-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d={item.icon}
-                  />
-                </svg>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-xl uppercase mb-2 text-[#0A0A0A]">
-                  {item.title}
-                </h3>
-                <p className="font-[family-name:var(--font-body)] text-[#555555] leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
+                title={item.title}
+                desc={item.desc}
+                icon={item.icon}
+                color={item.color}
+                delay={i * 100}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* COMO FUNCIONA */}
+      {/* CÓMO FUNCIONA */}
       <section className="py-24 md:py-32 bg-white text-[#0A0A0A]">
         <div className="max-w-[960px] mx-auto px-5 md:px-10">
           <div className="animate-on-scroll">
             <h2 className="font-[family-name:var(--font-display)] font-black text-3xl md:text-5xl uppercase text-center mb-16">
-              Como funciona?
+              ¿Cómo funciona?
             </h2>
           </div>
           <div className="grid md:grid-cols-5 gap-4 md:gap-2">
             {[
               { step: "01", text: "Compra tu entrada" },
-              { step: "02", text: "Asiste al evento el 17 de octubre en Bogota" },
+              { step: "02", text: "Asiste al evento el 17 de octubre en Bogotá" },
               { step: "03", text: "Participa en las actividades y retos" },
               { step: "04", text: "Llega a la final" },
               { step: "05", text: "Compite hasta por $30 millones" },
@@ -270,7 +258,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CUANDO Y DONDE */}
+      {/* CUÁNDO Y DÓNDE */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-white">
         <GeoShape
           color="#FFE600"
@@ -286,14 +274,14 @@ export default function Home() {
         <div className="relative z-10 max-w-[960px] mx-auto px-5 md:px-10">
           <div className="animate-on-scroll">
             <h2 className="font-[family-name:var(--font-display)] font-black text-3xl md:text-5xl uppercase text-center mb-16 text-[#0A0A0A]">
-              Cuando y donde?
+              ¿Cuándo y dónde?
             </h2>
           </div>
           <div className="animate-on-scroll grid md:grid-cols-3 gap-8 text-center">
             <div className="border border-[#E0E0E0] rounded-2xl p-8 bg-white">
               <span className="text-4xl block mb-4">&#128205;</span>
               <p className="font-[family-name:var(--font-display)] font-bold uppercase text-lg mb-1 text-[#0A0A0A]">
-                Auditorio Origenes
+                Auditorio Orígenes
               </p>
               <p className="font-[family-name:var(--font-body)] text-[#555555]">
                 Universidad EAN
@@ -311,7 +299,7 @@ export default function Home() {
             <div className="border border-[#E0E0E0] rounded-2xl p-8 bg-white">
               <span className="text-4xl block mb-4">&#128204;</span>
               <p className="font-[family-name:var(--font-display)] font-bold uppercase text-lg mb-1 text-[#0A0A0A]">
-                Bogota
+                Bogotá
               </p>
               <p className="font-[family-name:var(--font-body)] text-[#555555]">
                 Colombia
@@ -348,7 +336,7 @@ export default function Home() {
             <ul className="space-y-3 font-[family-name:var(--font-body)] text-white/80">
               <li className="flex items-start gap-3">
                 <span className="text-[#FFE600] mt-0.5">&#10003;</span>
-                Participacion oficial en el concurso
+                Participación oficial en el concurso
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#FFE600] mt-0.5">&#10003;</span>
@@ -393,10 +381,10 @@ export default function Home() {
           <div className="animate-on-scroll grid md:grid-cols-2 gap-8">
             <div className="border border-[#E0E0E0] rounded-2xl p-8 bg-white">
               <p className="font-[family-name:var(--font-display)] font-bold uppercase text-xl text-[#0052E0] mb-3">
-                Karem Suarez
+                Karem Suárez
               </p>
               <p className="font-[family-name:var(--font-body)] text-[#555555] leading-relaxed">
-                Mas de 13 anos impulsando la educacion financiera en Colombia.
+                Más de 13 años impulsando la educación financiera en Colombia.
               </p>
             </div>
             <div className="border border-[#E0E0E0] rounded-2xl p-8 bg-white">
@@ -404,7 +392,7 @@ export default function Home() {
                 CLEFI
               </p>
               <p className="font-[family-name:var(--font-body)] text-[#555555] leading-relaxed">
-                10 anos formando personas para tomar mejores decisiones
+                10 años formando personas para tomar mejores decisiones
                 financieras.
               </p>
             </div>
@@ -457,9 +445,9 @@ export default function Home() {
         <div className="max-w-[960px] mx-auto px-5 md:px-10">
           <div className="animate-on-scroll">
             <h2 className="font-[family-name:var(--font-display)] font-black text-3xl md:text-5xl uppercase mb-6 text-white">
-              Estas listo para demostrar
+              ¿Estás listo para demostrar
               <br />
-              cuanto sabes?
+              cuánto sabes?
             </h2>
             <p className="font-[family-name:var(--font-display)] font-bold text-xl uppercase mb-10 text-white">
               Haz que cada peso cuente.

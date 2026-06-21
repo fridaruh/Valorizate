@@ -15,12 +15,12 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Valorizate — El primer concurso de educacion financiera de America Latina",
+  title: "Valorizate — El primer concurso de educación financiera de América Latina",
   description:
-    "Participa en Valorizate. Compite en diferentes fases, supera desafios en vivo y demuestra que sabes administrar, ahorrar, invertir y tomar decisiones inteligentes. Premio mayor: $30.000.000 COP.",
+    "Participa en Valorizate. Compite en diferentes fases, supera desafíos en vivo y demuestra que sabes administrar, ahorrar, invertir y tomar decisiones inteligentes. Premio mayor: $30.000.000 COP.",
   metadataBase: new URL("https://valorizate.com"),
   openGraph: {
-    title: "Valorizate — El primer concurso de educacion financiera de America Latina",
+    title: "Valorizate — El primer concurso de educación financiera de América Latina",
     description:
       "Compite por hasta $30 millones de pesos. Sin sorteos. Sin azar. Tu conocimiento te lleva a la final.",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Valorizate — Concurso de Educacion Financiera",
+    title: "Valorizate — Concurso de Educación Financiera",
     description:
       "Compite por hasta $30 millones de pesos. Sin sorteos. Sin azar. Tu conocimiento te lleva a la final.",
     images: ["/og-preview.png"],
