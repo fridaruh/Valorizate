@@ -36,11 +36,12 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-[960px] mx-auto flex items-center justify-between px-5 md:px-10 py-4">
           <Image
-            src="/logo-64.png"
+            src="/og-preview.png"
             alt="Valorizate"
-            width={40}
-            height={40}
+            width={150}
+            height={31}
             priority
+            className="h-7 w-auto"
           />
           <a
             href={TICKET_URL}
@@ -76,12 +77,12 @@ export default function Home() {
 
         <div className="relative z-10 max-w-[960px] mx-auto">
           <Image
-            src="/og-preview.png"
+            src="/logo.png"
             alt="Valorizate"
-            width={480}
-            height={98}
+            width={120}
+            height={120}
             priority
-            className="mx-auto mb-8 w-[280px] md:w-[400px] lg:w-[480px] h-auto"
+            className="mx-auto mb-8"
           />
           <p className="font-[family-name:var(--font-display)] font-semibold text-xs uppercase tracking-[4px] text-[#0052E0] mb-6">
             17 de octubre &middot; Bogota, Colombia
